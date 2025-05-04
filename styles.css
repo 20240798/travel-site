@@ -1,0 +1,484 @@
+/* 전체 페이지 높이 설정 */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+/* 슬라이더 스타일 */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.slide-text {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*슬라이드당 색*/
+.slide:nth-child(1) {background-color: rgba(230, 230, 250, 0.9);}
+.slide:nth-child(2) {background-color: rgba(255, 204, 0, 0.2);}
+.slide:nth-child(3) {background-color: rgba(230, 230, 250, 0.9);}
+.slide:nth-child(4) {background-color: rgba(230, 230, 250, 0.9);}
+.slide:nth-child(5) {background-color: rgba(230, 230, 250, 0.9);}
+
+.slide-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+.slide-text h2 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.slide-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+}
+
+.slide-number {
+    font-size: 14px;
+    color: #333;
+}
+
+.prev-slide, .next-slide {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.slide {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.slide.active {
+    opacity: 1;
+    position: relative;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .slide {
+        flex-direction: column;
+    }
+    .slide-text, .slide-image {
+        width: 100%;
+        height: 50%;
+    }
+}
+/* 헤더 스타일 */
+header {
+    position: relative;
+    z-index: 1000;
+}
+
+/* 헤더 상단 (제목, 검색창, 로그인 버튼) */
+.header-top {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.header-top h1 {
+    font-size: 24px;
+    margin: 0;
+    flex-grow: 0;
+    text-align: left;
+}
+
+/* 검색창 스타일 */
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-100%);
+}
+
+.search-bar input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* 로그인 및 회원가입 버튼 */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 버튼 간 간격 조정 */
+    margin-left: auto;
+}
+
+.auth-buttons button,
+.auth-buttons a {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.login-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.signup-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color: #218838;
+}
+
+/* 메뉴바 스타일 */
+.menu-bar {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* 햄버거 메뉴 아이콘 스타일 */
+.hamburger {
+    display: block;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+/* 메뉴 리스트 스타일 */
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+/* 현재 페이지 강조 */
+.menu-list .active a {
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.menu-bar li {
+    margin: 0 15px;
+}
+
+.menu-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-bar a:hover {
+    color: #ddd;
+}
+
+/* 작은 화면에서 스타일 변경 (화면 너비 768px 이하) */
+@media (max-width: 768px) {
+    .header-top {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .header-top h1 {
+        flex-grow: 0;
+        text-align: left;
+        order: -1;
+    }
+
+    .search-bar {
+        position: static;
+        transform: none;
+        order: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .auth-buttons {
+        order: 1;
+        margin-left: 0;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .menu-list.active {
+        display: flex;
+    }
+
+    .menu-bar li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .content-section {
+        padding: 10px;
+    }
+
+    .content-section h2 {
+        font-size: 16px;
+    }
+
+    .content-section p {
+        font-size: 14px;
+    }
+}
+
+/* 메인 콘텐츠 영역 */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* 지도 컨테이너 (map.html에서만 사용) */
+.map-container {
+    flex: 1;
+    position: relative;
+    padding: 0;
+}
+
+/* 네이버 지도 스타일 */
+#map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 콘텐츠 섹션 스타일 */
+.content-section {
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.content-section h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.content-section p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* 지도 보기 버튼 스타일 */
+.map-button {
+    display: inline-block;
+    padding: 8px 16px; /* auth-buttons와 크기 일치 */
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.map-button:hover {
+    background-color: #0056b3;
+}
+
+/* 모달 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content label {
+    font-size: 16px;
+}
+
+.modal-content input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal-content button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+
+/*지역 css*/
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.region-buttons {
+    display: flex;
+    flex-direction: column; /* 버튼을 세로로 나열 */
+    gap: 10px; /* 버튼 간 간격 */
+    align-items: flex-start; /* 버튼을 중앙 정렬 */
+}
+
+.region-btn {
+    background: none; /* 배경색 제거 */
+    border: none; /* 테두리 제거 */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.image-section img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+}

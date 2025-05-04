@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>국내 여행 가이드</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 상단 헤더 -->
+    <header>
+        <div class="header-top">
+            <h1><a href="index.html" style="text-decoration: none; color: inherit;">3조 제목</a></h1>
+            <div class="search-bar">
+                <input type="text" placeholder="검색어를 입력하세요." aria-label="검색어 입력">
+                <button type="button">검색</button>
+            </div>
+            <div class="auth-buttons">
+                <a href="map.html" class="map-button">지도 보기</a>
+                <button class="login-btn">로그인</button>
+                <button class="signup-btn">회원가입</button>
+            </div>
+        </div>
+
+        <nav class="menu-bar">
+            <div class="hamburger">☰</div>
+            <ul class="menu-list">
+                <li><a href="gyeonggi.html">경기도</a></li>
+                <li><a href="gangwon.html">강원도</a></li>
+                <li><a href="chungbuk.html">충청북도</a></li>
+                <li><a href="chungnam.html">충청남도</a></li>
+                <li><a href="gyeongbuk.html">경상북도</a></li>
+                <li><a href="gyeongnam.html">경상남도</a></li>
+                <li><a href="jeonbuk.html">전라북도</a></li>
+                <li><a href="jeonnam.html">전라남도</a></li>
+                <li><a href="jeju.html">제주도</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="slider">
+            <div class="slider-container">
+                <!-- 슬라이드 1 -->
+                <div class="slide active">
+                    <div class="slide-text">
+                        <p>부산여행 코스<p>
+                        <h2>여름은 바다에서 놀아야지~!</h2>
+                        <a href="gyeongnam.html">자세히 보기</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="picture\busanH.jpg" alt="해운대 바다">
+                    </div>
+                </div>
+                <!-- 슬라이드 2 -->
+                <div class="slide">
+                    <div class="slide-text">
+                        <p>제주도 유채꽃 명소 추천</p>
+                        <h2>제주도 꽃 여행 🌼</h2>
+                        <a href="jeju.html">자세히 보기</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="picture/jeju_flower.jpg" alt="제주도 유채꽃">
+                    </div>
+                </div>
+                <!-- 추가 슬라이드 가능 -->
+            </div>
+            <!-- 슬라이더 컨트롤 -->
+            <div class="slider-controls">
+                <span class="slide-number">01 / 02</span>
+                <button class="prev-slide">←</button>
+                <button class="next-slide">→</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- 로그인 모달 -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>로그인</h2>
+            <form>
+                <label for="username">아이디:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">비밀번호:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">로그인</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
