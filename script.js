@@ -21,39 +21,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* 검색 기능 */
-    const searchInput = document.querySelector('.search-bar input');
-    const searchButton = document.querySelector('.search-bar button');
+/* 슬라이더 제어 */
+    const slides = document.querySelectorAll('.slide');
+    const backSlideBtn = document.querySelector('.back-slide');
+    const nextSlideBtn = document.querySelector('.next-slide');
+    const hmsColor = document.querySelector('.hms-color');
+    let currentSlide = 0;
 
-    if (searchInput && searchButton) {
-        searchButton.addEventListener('click', () => {
-            const query = searchInput.value.toLowerCase();
-            const regions = {
-                '경기도': 'gyeonggi.html',
-                '강원도': 'gangwon.html',
-                '충청북도': 'chungbuk.html',
-                '충청남도': 'chungnam.html',
-                '경상북도': 'gyeongbuk.html',
-                '경상남도': 'gyeongnam.html',
-                '전라북도': 'jeonbuk.html',
-                '전라남도': 'jeonnam.html',
-                '제주도': 'jeju.html'
-            };
+    // 슬라이드별 배경 정의
+    const slideBackgrounds = [
+        'linear-gradient(to right, #debcfb, #ffffff)', // 슬라이드 1 (부산)
+        'linear-gradient(to right, #b3e5fc, #ffffff)'  // 슬라이드 2 (제주도)
+        
+    ];
 
-            for (let region in regions) {
-                if (region.toLowerCase().includes(query)) {
-                    window.location.href = regions[region];
-                    break;
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+                // 배경 그라디언트 변경
+                if (hmsColor) {
+                    hmsColor.style.background = slideBackgrounds[index];
                 }
             }
         });
-
-        searchInput.addEventListener('keypress', (event) => {
-            if (event.key === 'Enter') {
-                searchButton.click();
-            }
-        });
+        updateSlideNumber();
     }
+
+    function updateSlideNumber() {
+        const totalSlides = slides.length;
+        const currentNumber = (currentSlide + 1).toString().padStart(2, '0');
+        document.querySelector('.slide-number').textContent = `${currentNumber} / ${totalSlides.toString().padStart(2, '0')}`;
+    }
+
+    if (backSlideBtn && nextSlideBtn && slides.length && hmsColor) {
+        nextSlideBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        backSlideBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        // 초기 슬라이드 및 배경 표시
+        showSlide(currentSlide);
+
+        // 5초마다 슬라이드 및 배경 자동 전환
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 5000); // 5000ms = 5초
+    }
+
+
 
     /* 지역 메뉴 버튼 클릭 시 내용 변경 */
     const regionButtons = document.querySelectorAll('.region-btn');
