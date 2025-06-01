@@ -7,108 +7,30 @@
 </head>
 <body>
     <header>
-        <div class="header-top">
-            <h1><a href="index.html" style="text-decoration: none; color: inherit;">제목</a></h1>
-            <div class="search-bar">
-                <input type="text" placeholder="검색어를 입력하세요." aria-label="검색어 입력">
-                <button type="button">검색</button>
+            <div class="header-top">
+                <h1><a href="index.html" style="text-decoration: none; color: inherit;">3조 제목</a></h1>
+                <ul class="menu-list">
+                    <li><a href="gyeonggi.html">경기도</a></li>
+                    <li><a href="gangwon.html">강원도</a></li>
+                    <li><a href="chungbuk.html">충청북도</a></li>
+                    <li><a href="chungnam.html">충청남도</a></li>
+                    <li><a href="gyeongbuk.html">경상북도</a></li>
+                    <li><a href="gyeongnam.html">경상남도</a></li>
+                    <li><a href="jeonbuk.html">전라북도</a></li>
+                    <li><a href="jeonnam.html">전라남도</a></li>
+                    <li><a href="jeju.html">제주도</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="map.html" class="map-button">지도 보기</a>
+                    <button class="login-btn">로그인</button>
+                    <button class="signup-btn">회원가입</button>
+                </div>
             </div>
-            <div class="auth-buttons">
-                <a href="map.html" class="map-button">지도 보기</a>
-                <button class="login-btn">로그인</button>
-                <button class="signup-btn">회원가입</button>
-            </div>
-        </div>
+        </header>
 
-        <nav class="menu-bar">
-            <ul class="menu-list">
-                <li><a href="gyeonggi.html">경기도</a></li>
-                <li><a href="gangwon.html">강원도</a></li>
-                <li><a href="chungbuk.html">충청북도</a></li>
-                <li><a href="chungnam.html">충청남도</a></li>
-                <li><a href="gyeongbuk.html">경상북도</a></li>
-                <li><a href="gyeongnam.html">경상남도</a></li>
-                <li><a href="jeonbuk.html">전라북도</a></li>
-                <li><a href="jeonnam.html">전라남도</a></li>
-                <li><a href="jeju.html">제주도</a></li>
-            </ul>
-        </nav>
-    </header>
 
      <!-- 메인 콘텐츠 -->
      <main class="main-content">
         <section class="region-menu-section">
             <h2>전북 지역</h2>
             <div class="region-buttons">
-                <button class="region-btn active" data-region="Jeonju">전주</button>
-                <button class="region-btn" data-region="Gunsan">군산</button>
-                <button class="region-btn" data-region="Iksan">익산</button>
-                <button class="region-btn" data-region="Muju">무주</button>
-            </div>
-        </section>
-
-        <section class="description-section">
-            <h2 id="region-title">전주</h2>
-            <p id="region-description">
-                전주는 전통 한옥이 밀집해 있어 한국의 전통 가옥 음식 복식을 체험할 수 있는 명소입니다 비빔밥의 본고장으로 유명하며 한지,전통술,판소리 등 다양한 전통문화 콘텐츠를 체험할 수 있어 외국인 관광객들에게도 인기가 많습니다.
-            </p>
-        </section>
-
-          <section class="description-section">
-            <h2 id="region-title">군산</h2>
-            <p id="region-description">
-                군산은 서해안에 위치한 항구 도시로 일제강점기의 건축물과 역사가 고스란히 남아있는 도시입니다 근대문화유산이 잘 보존된 도시로 옛 철길 일본식 건물 동국사 히로쓰 가옥 등 역사적 건축물이 관광지로 개발되어 있습니다 군산은 또한 신선한 해산물과 군산 짬뽕 이성당 빵집 같은 먹거리로도 유명하며 고군산군도 섬 여행도 인기입니다  
-            </p>
-        </section>
-
-          <section class="description-section">
-            <h2 id="region-title">익산</h2>
-            <p id="region-description">
-                익산은 예부터 백제의 주요 도시였으며 유네스코 세계문화유산인 미륵사지와 왕궁리 유적을 중심으로 고대 백제 문화를 느낄 수 있는 도시입니다 미륵사지 석탑은 한국 석탑 가운데 가장 오래되고 큰 석탑으로 유명하며 주변에는 미륵사지 유물전시관도 잘 갖추어져 있습니다 매년 열리는 익산 보석대축제도 많은 사람들의 관심을 끕니다. 
-            </p>
-        </section>
-
-          <section class="description-section">
-            <h2 id="region-title">무주</h2>
-            <p id="region-description">
-                무주는 자연 관광과 겨울 레저의 중심으로 무주덕유산리조트는 겨울에는 스키장 여름에는 휴양지로 각광 받으며 덕유산의 수려한 자연 경관은 등산객에게도 인기가 많습니다 설천봉에서도 향적봉에까지 이어지는 능선 트레킹 코스는 눈꽃 산행지로도 유명합니다  
-            </p>
-        </section>
-
-        <section class="image-section">
-            <h2>지역 이미지</h2>
-            <img id="region-image" src="picture/jeonju.jpg" alt="전주사진">
-        </section>
-          <section class="image-section">
-            <h2>지역 이미지</h2>
-            <img id="region-image" src="picture/gunsan.jpg" alt="군산사진">
-        </section>
-          <section class="image-section">
-            <h2>지역 이미지</h2>
-            <img id="region-image" src="picture/iksan.jpg" alt="익산사진">
-        </section>
-          <section class="image-section">
-            <h2>지역 이미지</h2>
-            <img id="region-image" src="picture/muju.jpg" alt="무주사진">
-        </section>
-    </main>
-
-    <!-- 로그인 모달 -->
-    <div id="login-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">×</span>
-            <h2>로그인</h2>
-            <form>
-                <label for="username">아이디:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">비밀번호:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">로그인</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- JavaScript 연결 -->
-    <script src="script.js"></script>
-</body>
-</html>

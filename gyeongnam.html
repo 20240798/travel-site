@@ -7,43 +7,34 @@
 </head>
 <body>
     <header>
-        <div class="header-top">
-            <h1><a href="index.html" style="text-decoration: none; color: inherit;">제목</a></h1>
-            <div class="search-bar">
-                <input type="text" placeholder="검색어를 입력하세요." aria-label="검색어 입력">
-                <button type="button">검색</button>
+            <div class="header-top">
+                <h1><a href="index.html" style="text-decoration: none; color: inherit;">3조 제목</a></h1>
+                <ul class="menu-list">
+                    <li><a href="gyeonggi.html">경기도</a></li>
+                    <li><a href="gangwon.html">강원도</a></li>
+                    <li><a href="chungbuk.html">충청북도</a></li>
+                    <li><a href="chungnam.html">충청남도</a></li>
+                    <li><a href="gyeongbuk.html">경상북도</a></li>
+                    <li><a href="gyeongnam.html">경상남도</a></li>
+                    <li><a href="jeonbuk.html">전라북도</a></li>
+                    <li><a href="jeonnam.html">전라남도</a></li>
+                    <li><a href="jeju.html">제주도</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="map.html" class="map-button">지도 보기</a>
+                    <button class="login-btn">로그인</button>
+                    <button class="signup-btn">회원가입</button>
+                </div>
             </div>
-            <div class="auth-buttons">
-                <a href="map.html" class="map-button">지도 보기</a>
-                <button class="login-btn">로그인</button>
-                <button class="signup-btn">회원가입</button>
-            </div>
-        </div>
+        </header>
 
-        <nav class="menu-bar">
-            <ul class="menu-list">
-                <li><a href="gyeonggi.html">경기도</a></li>
-                <li><a href="gangwon.html">강원도</a></li>
-                <li><a href="chungbuk.html">충청북도</a></li>
-                <li><a href="chungnam.html">충청남도</a></li>
-                <li><a href="gyeongbuk.html">경상북도</a></li>
-                <li><a href="gyeongnam.html">경상남도</a></li>
-                <li><a href="jeonbuk.html">전라북도</a></li>
-                <li><a href="jeonnam.html">전라남도</a></li>
-                <li><a href="jeju.html">제주도</a></li>
-            </ul>
-        </nav>
-    </header>
 
      <!-- 메인 콘텐츠 -->
      <main class="main-content">
         <section class="region-menu-section">
             <h2>경상남도 지역</h2>
             <div class="region-buttons">
-                <button class="region-btn active" data-region="Jinhae">진해</button>
-                <button class="region-btn" data-region="Geoje Island">거제도</button>
-                <button class="region-btn" data-region="Tongyeong">통영</button>
-                <button class="region-btn" data-region="Changwon">창원</button>
+
             </div>
         </section>
 
@@ -51,45 +42,13 @@
             <h2 id="region-title">진해</h2>
             <p id="region-description">
                 진해는 봄이 되면 진해 전역이 벚꽃으로 가득 차 아름다운 경관을 자랑하며 해군기자와 해군사관 학교가 위치해 있어 해군의 역사와 문화를 함께 느낄 수 있는 도시입니다 바다와 산이 어루어진 자연경관도 뛰어나고 군항제 기간에는 다양한 문화행사와 퍼레이드도 열려 가족 단위 관광객에게 인기가 많습니다.
-            </p>
-        </section>
 
-         <section class="description-section">
-            <h2 id="region-title">거제도</h2>
-            <p id="region-description">
-                거제도는 경상남도에서 가장 큰 섬으로 깨끗한 해변과 푸른 바다 아름다운 산세가 어우러진 자연 휴양지입니다 인근에는 아름다운 해양 식물원으로 유명하며 관광객들이 많이 찾는 명소입니다
-            </p>
-        </section>
-
-         <section class="description-section">
-            <h2 id="region-title">통영</h2>
-            <p id="region-description">
-               통영은 다도해의 아름다운 섬과 해안선을 자랑하며 신선한 해산물 요리가 유명합니다 통영국제음악제 같은 행사가 열리고 동피랑 벽화마을 같은 예술적 명소도 있어 관광객들에게 인기가 많습니다 역사적으로는 해군기지가 있었던 곳입니다.
-            </p>
-        </section>
-
-         <section class="description-section">
-            <h2 id="region-title">창원</h2>
-            <p id="region-description">
-               창원은 산업도시로서 기계 자동차 조선 등 다양한 제조업이 발달해 있으며 산과 바다가 가까워 자연과 도시가 조화를 이루고 있고 창원시립마산박물관, 마산가고파국화축제 등 다양한 문화행사와 관광 명소가 있습니다.  
             </p>
         </section>
 
         <section class="image-section">
             <h2>지역 이미지</h2>
-            <img id="region-image" src="picture/jinhae.jpg" alt="진해사진">
-        </section>
-          <section class="image-section">
-            <h2>지역 이미지</h2>
-            <img id="region-image" src="picture/geoje.jpg" alt="거제도사진">
-        </section>
-          <section class="image-section">
-            <h2>지역 이미지</h2>
-            <img id="region-image" src="picture/tongyeong.JPG" alt="통영사진">
-        </section>
-          <section class="image-section">
-            <h2>지역 이미지</h2>
-            <img id="region-image" src="picture/changwon.jpg" alt="창원사">
+
         </section>
     </main>
 

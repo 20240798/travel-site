@@ -7,56 +7,50 @@
 </head>
 <body>
     <header>
-        <div class="header-top">
-            <h1><a href="index.html" style="text-decoration: none; color: inherit;">제목</a></h1>
-            <div class="search-bar">
-                <input type="text" placeholder="검색어를 입력하세요." aria-label="검색어 입력">
-                <button type="button">검색</button>
+            <div class="header-top">
+                <h1><a href="index.html" style="text-decoration: none; color: inherit;">3조 제목</a></h1>
+                <ul class="menu-list">
+                    <li><a href="gyeonggi.html">경기도</a></li>
+                    <li><a href="gangwon.html">강원도</a></li>
+                    <li><a href="chungbuk.html">충청북도</a></li>
+                    <li><a href="chungnam.html">충청남도</a></li>
+                    <li><a href="gyeongbuk.html">경상북도</a></li>
+                    <li><a href="gyeongnam.html">경상남도</a></li>
+                    <li><a href="jeonbuk.html">전라북도</a></li>
+                    <li><a href="jeonnam.html">전라남도</a></li>
+                    <li><a href="jeju.html">제주도</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="map.html" class="map-button">지도 보기</a>
+                    <button class="login-btn">로그인</button>
+                    <button class="signup-btn">회원가입</button>
+                </div>
             </div>
-            <div class="auth-buttons">
-                <a href="map.html" class="map-button">지도 보기</a>
-                <button class="login-btn">로그인</button>
-                <button class="signup-btn">회원가입</button>
-            </div>
-        </div>
+        </header>
 
-        <nav class="menu-bar">
-            <ul class="menu-list">
-                <li><a href="gyeonggi.html">경기도</a></li>
-                <li><a href="gangwon.html">강원도</a></li>
-                <li><a href="chungbuk.html">충청북도</a></li>
-                <li><a href="chungnam.html">충청남도</a></li>
-                <li><a href="gyeongbuk.html">경상북도</a></li>
-                <li><a href="gyeongnam.html">경상남도</a></li>
-                <li><a href="jeonbuk.html">전라북도</a></li>
-                <li><a href="jeonnam.html">전라남도</a></li>
-                <li><a href="jeju.html">제주도</a></li>
-            </ul>
-        </nav>
-    </header>
 
      <!-- 메인 콘텐츠 -->
      <main class="main-content">
         <section class="region-menu-section">
             <h2>강원도 지역</h2>
             <div class="region-buttons">
-                <button class="region-btn active" data-region=""></button>
-                <button class="region-btn" data-region=""></button>
-                <button class="region-btn" data-region=""></button>
-                <button class="region-btn" data-region=""></button>
+                <button class="region-btn active" data-region="gangneung">강릉</button>
+                <button class="region-btn" data-region="sokcho">속초</button>
+                <button class="region-btn" data-region="pyeongchang">평창</button>
+                <button class="region-btn" data-region="chuncheon">춘천</button>
             </div>
         </section>
 
         <section class="description-section">
-            <h2 id="region-title"></h2>
+            <h2 id="region-title">강릉</h2>
             <p id="region-description">
-                
+                강릉은 푸른 등해 바다와 울창산 산을 동시에 만끽할 수 있는 아름다운 도시 입니다. 역사, 문화, 자연을 아우르는 다양한 볼거리가 있고, 안목해변 거리에서 특별한 분위기가 매력적입니다.
             </p>
         </section>
 
         <section class="image-section">
             <h2>지역 이미지</h2>
-            <img id="region-image" src="" alt="">
+            <img id="region-image" src="gangneung.jpg" alt="강릉 사진">
         </section>
     </main>
 
